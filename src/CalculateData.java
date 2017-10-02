@@ -29,7 +29,7 @@ public class CalculateData {
 					return window.get(0); //return first index in win
 				} 
 			} else {
-				window.clear(); //clear the list if item not winLenth 
+				window.clear(); //clear the list if item not in search range
 			}
 		}
 		
@@ -63,7 +63,7 @@ public class CalculateData {
 					return window.get(0); //return first index in win
 				} 
 			}else {
-				window.clear(); //clear the list if item not winLenth 
+				window.clear(); //clear the list if item not in search range 
 			}
 		}
 		
@@ -99,7 +99,7 @@ public class CalculateData {
 					return window.get(0); //return first index in win
 				} 
 			}else {
-				window.clear(); //clear the list if item not winLenth 
+				window.clear(); //clear the list if item not search range 
 			}
 		}
 		
@@ -136,7 +136,7 @@ public class CalculateData {
 					continuousSegments.add(range);
 				} 
 			}else {
-				window.clear(); //clear the list if item not winLenth 
+				window.clear(); //clear the list if item not in seach range 
 			}
 		}
 		if (continuousSegments.size() < 1) {
