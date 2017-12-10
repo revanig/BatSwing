@@ -1,11 +1,8 @@
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.io.File;
-import java.util.*;
 /**
  * 
  * Takes a csv file and processes into arraylist of DataPoints
@@ -24,7 +21,6 @@ public class ProcessSwingData {
 			Scanner scanner = new Scanner(new File(file));
 			//Use Delimiter as COMMA
 			scanner.useDelimiter(",");
-			int index = 0;
 			while(scanner.hasNextLine()){
 				String line = scanner.nextLine();
 				String[] values = line.split(",");

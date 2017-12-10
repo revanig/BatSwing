@@ -33,7 +33,7 @@ public class BatSwing {
 		int continuousAboveValue = CalculateData.searchContinuityAboveValue(ax, 0, 1000, 3, 2);
 		int backContinuity = CalculateData.backSearchContinuityWithinRange(ay, 1200, 500, 1, 5, 5);
 		int continuityTwoSignals = CalculateData.searchContinuityAboveValueTwoSignals(ax, ay, 0, 1000, 2, 3, 2); 
-		ArrayList<int[]> multi = CalculateData.searchMultiContinuityWithinRange(wx, 50, 1200, 3, 5, 3);
+		ArrayList<int[]> multi = CalculateData.searchMultiContinuityWithinRange(wx, 50, 1200, -1, 0, 3);
 		//	System.out.println(times.toString());
 		System.out.println(ax.toString());
 //		System.out.println(ay.toString());

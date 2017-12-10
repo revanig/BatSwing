@@ -33,11 +33,7 @@ public class CalculateData {
 			}
 		}
 		
-		if (window.size() < winLength) {
-			return -1; //return non true value (could maybe throw exception here)
-		}
-		
-		return window.get(0);
+		return windowSizeChecker(window, winLength);
 	}
 	
 	/**
@@ -67,11 +63,7 @@ public class CalculateData {
 			}
 		}
 		
-		if (window.size() < winLength) {
-			return -1; //return non true value (could maybe throw exception here)
-		}
-		
-		return window.get(0);
+		return windowSizeChecker(window, winLength);
 	}
 	
 	/**
@@ -93,7 +85,7 @@ public class CalculateData {
 										float threshold2, int winLength){
 		ArrayList<Integer> window = new ArrayList<Integer>();
 		for (int index = indexBegin; index <= indexEnd; index ++){
-			if (data1.get(index) > threshold1 && data1.get(index) > threshold2){
+			if (data1.get(index) > threshold1 && data2.get(index) > threshold2){
 				window.add(index); //collect items in winLength		
 				if (window.size() == winLength){
 					return window.get(0); //return first index in win
@@ -103,6 +95,11 @@ public class CalculateData {
 			}
 		}
 		
+		return windowSizeChecker(window, winLength);
+		
+	}
+	
+	private static int windowSizeChecker(ArrayList<Integer> window, int winLength) {
 		if (window.size() < winLength) {
 			return -1; //return non true value (could maybe throw exception here)
 		}
@@ -136,7 +133,7 @@ public class CalculateData {
 					continuousSegments.add(range);
 				} 
 			}else {
-				window.clear(); //clear the list if item not in seach range 
+				window.clear(); //clear the list if item not in search range 
 			}
 		}
 		if (continuousSegments.size() < 1) {
@@ -146,4 +143,5 @@ public class CalculateData {
 		
 		return continuousSegments;
 	}
+	
 }
